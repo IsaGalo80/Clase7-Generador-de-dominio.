@@ -7,5 +7,23 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+
+  const evento = document.getElementById("pulsador");
+  evento.addEventListener("click", function() {
+    let pronoun = ["the", "our"];
+    let adj = ["great", "big"];
+    let noun = ["jogger", "racoon"];
+    let term = [".com, .es, .io, .ext"];
+    let links = [];
+
+    for (let i = 0; i < pronoun.length; i++) {
+      for (let j = 0; j < adj.length; j++)
+        for (let k = 0; k < noun.length; k++)
+          for (let l = 0; l < term.length; l++) {
+            links = links + pronoun[i] + adj[j] + noun[k] + term[l];
+          }
+    }
+    console.log(links);
+    document.getElementById("enlaces").innerHTML = links;
+  });
 };
